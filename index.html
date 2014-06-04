@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="js/paper-full.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+	// Create a Paper.js Path to draw a line into it:
+	//var path = new Path();
+	var rectStartPoint = new Point(10,10);
+	var rectSize = new Size(300,180);	
+	var myRectangle = new Rectangle(rectStartPoint, rectSize);
+	var myText = new PointText(myRectangle.center);
+	// Give the stroke a color
+	//path.strokeColor = 'black';
+	//var start = new Point(100, 100);
+	//path.moveTo(start);
+
+	var path = new Path.Rectangle(myRectangle);
+	
+	path.strokeColor = 'red';
+	path.strokeWidth = 2;
+	path.fillColor = 'white';
+	myText.justification = 'center';
+	myText.fillcolor = 'black';
+	myText.content = 'BooYaa!';
+	myText.bringToFront();
+	var textBounds = myText.bounds;
+	console.log('Rectangle = ' + myRectangle.left + ',' + myRectangle.right + ',' + myRectangle.top + ',' + myRectangle.bottom + ',' + myRectangle.center);
+
+	console.log('Text = ' + textBounds.top + ',' + textBounds.bottom + ',' + textBounds.center);
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
