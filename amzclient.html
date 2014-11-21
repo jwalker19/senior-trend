@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="llnwJiraModule">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jwalker.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="bootstrap/css/bootstrap.css">-->
+    <script src="js/jwamzclient.js"></script>
+  </head>
+  <body>
+    <div ng-controller="jwamzcontroller">
+      <div class="panel panel-default">
+      <div class="panel-heading">Login</div>
+      <form ng-submit="getProducts()">
+      <table class="table" align="left">
+        <tr>
+          <td> 
+            <label>Username</label>
+          </td>
+          <td>
+            <input ng-model="amzUser" type="text">
+          </td>
+          <td>
+            <label>Password</label>
+          </td>
+          <td>
+            <input ng-model="amzPwd" type="password">
+          </td>
+        </tr>
+      </table>
+      <button class="btn btn-primary btn-sm" type="submit" value="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
